@@ -7,7 +7,11 @@
 
 import UIKit
 
-class TopRatedMoviesViewController: UIViewController {
+class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract {
+    
+    lazy var presenter: TopRatedMoviedPresenterContract = {
+        return TopRatedMoviesPresenter(view: self)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,5 +21,8 @@ class TopRatedMoviesViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.view.backgroundColor = .red
+       
+        presenter.getAllGenres()
+        
     }
 }
