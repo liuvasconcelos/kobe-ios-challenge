@@ -14,6 +14,7 @@
 		34824A362355084D002876BE /* kobe_ios_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34824A352355084D002876BE /* kobe_ios_challengeUITests.swift */; };
 		462FE386618C4895095E5D7D /* Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ECB68001B26343740C02C5D /* Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework */; };
 		53D1E2A3235A7956002D11B7 /* TopRatedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */; };
+		53D1E2A5235A7B3C002D11B7 /* MovieEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A4235A7B3C002D11B7 /* MovieEntry.swift */; };
 		86A4425640183CE12A212632 /* Pods_kobe_ios_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3044B0AD5BD13285E36BF99B /* Pods_kobe_ios_challenge.framework */; };
 		8758F28AE9CCCDFE0AD001CE /* Pods_kobe_ios_challengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2732E24759B53439C83C9AB5 /* Pods_kobe_ios_challengeTests.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		4790FE5BB8F44EC054A4F932 /* Pods-kobe-ios-challengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challengeTests.debug.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challengeTests/Pods-kobe-ios-challengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		52AD8C1D12924893E6A2825E /* Pods-kobe-ios-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challenge.release.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challenge/Pods-kobe-ios-challenge.release.xcconfig"; sourceTree = "<group>"; };
 		53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesViewController.swift; sourceTree = "<group>"; };
+		53D1E2A4235A7B3C002D11B7 /* MovieEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntry.swift; sourceTree = "<group>"; };
 		6C4625B031BA8A0E53E35C8D /* Pods-kobe-ios-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challenge.debug.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challenge/Pods-kobe-ios-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		B9386AD8D00BC8FA0D74C6B7 /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challenge-kobe-ios-challengeUITests/Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDBD98434A89625643272757 /* Pods-kobe-ios-challengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challengeTests.release.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challengeTests/Pods-kobe-ios-challengeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +96,8 @@
 				34824A292355084D002876BE /* kobe-ios-challengeTests */,
 				34824A342355084D002876BE /* kobe-ios-challengeUITests */,
 				34824A132355084B002876BE /* Products */,
+				6617D8DDB7868EE91D135451 /* Pods */,
+				D206A1765769F241C05441DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +114,10 @@
 		34824A142355084B002876BE /* kobe-ios-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				53D1E29C235A78AE002D11B7 /* Application */,
+				53D1E29D235A78C9002D11B7 /* Models */,
+				53D1E29E235A78D9002D11B7 /* DataSources */,
 				34824A152355084B002876BE /* AppDelegate.swift */,
-				34824A172355084B002876BE /* ViewController.swift */,
-				34824A192355084B002876BE /* Main.storyboard */,
 				34824A1C2355084D002876BE /* Assets.xcassets */,
 				34824A1E2355084D002876BE /* LaunchScreen.storyboard */,
 				34824A212355084D002876BE /* Info.plist */,
@@ -138,6 +143,76 @@
 			path = "kobe-ios-challengeUITests";
 			sourceTree = "<group>";
 		};
+		53D1E29C235A78AE002D11B7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E2A1235A793C002D11B7 /* TopRatedMovies */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		53D1E29D235A78C9002D11B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E2A0235A790F002D11B7 /* DTOs */,
+				53D1E29F235A7907002D11B7 /* Entries */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		53D1E29E235A78D9002D11B7 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		53D1E29F235A7907002D11B7 /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E2A4235A7B3C002D11B7 /* MovieEntry.swift */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
+		53D1E2A0235A790F002D11B7 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		53D1E2A1235A793C002D11B7 /* TopRatedMovies */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */,
+			);
+			path = TopRatedMovies;
+			sourceTree = "<group>";
+		};
+		6617D8DDB7868EE91D135451 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C4625B031BA8A0E53E35C8D /* Pods-kobe-ios-challenge.debug.xcconfig */,
+				52AD8C1D12924893E6A2825E /* Pods-kobe-ios-challenge.release.xcconfig */,
+				B9386AD8D00BC8FA0D74C6B7 /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig */,
+				07042E7D2DF97A4E1C6FB769 /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.release.xcconfig */,
+				4790FE5BB8F44EC054A4F932 /* Pods-kobe-ios-challengeTests.debug.xcconfig */,
+				EDBD98434A89625643272757 /* Pods-kobe-ios-challengeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D206A1765769F241C05441DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3044B0AD5BD13285E36BF99B /* Pods_kobe_ios_challenge.framework */,
+				2ECB68001B26343740C02C5D /* Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework */,
+				2732E24759B53439C83C9AB5 /* Pods_kobe_ios_challengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34824A3A2355084D002876BE /* Build configuration list for PBXNativeTarget "kobe-ios-challenge" */;
 			buildPhases = (
+				0492D47ED2A8FCF5A13331C9 /* [CP] Check Pods Manifest.lock */,
 				34824A0E2355084B002876BE /* Sources */,
 				34824A0F2355084B002876BE /* Frameworks */,
 				34824A102355084B002876BE /* Resources */,
@@ -162,6 +238,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34824A3D2355084D002876BE /* Build configuration list for PBXNativeTarget "kobe-ios-challengeTests" */;
 			buildPhases = (
+				30326BBBFD24C9F747EC602F /* [CP] Check Pods Manifest.lock */,
 				34824A222355084D002876BE /* Sources */,
 				34824A232355084D002876BE /* Frameworks */,
 				34824A242355084D002876BE /* Resources */,
@@ -180,6 +257,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34824A402355084D002876BE /* Build configuration list for PBXNativeTarget "kobe-ios-challengeUITests" */;
 			buildPhases = (
+				94AFC145CA6993ABFCB74735 /* [CP] Check Pods Manifest.lock */,
 				34824A2D2355084D002876BE /* Sources */,
 				34824A2E2355084D002876BE /* Frameworks */,
 				34824A2F2355084D002876BE /* Resources */,
@@ -243,7 +321,6 @@
 			files = (
 				34824A202355084D002876BE /* LaunchScreen.storyboard in Resources */,
 				34824A1D2355084D002876BE /* Assets.xcassets in Resources */,
-				34824A1B2355084B002876BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,13 +340,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0492D47ED2A8FCF5A13331C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kobe-ios-challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30326BBBFD24C9F747EC602F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kobe-ios-challengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94AFC145CA6993ABFCB74735 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kobe-ios-challenge-kobe-ios-challengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		34824A0E2355084B002876BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34824A182355084B002876BE /* ViewController.swift in Sources */,
+				53D1E2A3235A7956002D11B7 /* TopRatedMoviesViewController.swift in Sources */,
 				34824A162355084B002876BE /* AppDelegate.swift in Sources */,
+				53D1E2A5235A7B3C002D11B7 /* MovieEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,14 +452,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		34824A192355084B002876BE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				34824A1A2355084B002876BE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		34824A1E2355084D002876BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,6 +581,7 @@
 		};
 		34824A3B2355084D002876BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C4625B031BA8A0E53E35C8D /* Pods-kobe-ios-challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -461,6 +601,7 @@
 		};
 		34824A3C2355084D002876BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52AD8C1D12924893E6A2825E /* Pods-kobe-ios-challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +621,7 @@
 		};
 		34824A3E2355084D002876BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4790FE5BB8F44EC054A4F932 /* Pods-kobe-ios-challengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +643,7 @@
 		};
 		34824A3F2355084D002876BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDBD98434A89625643272757 /* Pods-kobe-ios-challengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
