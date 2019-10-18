@@ -7,6 +7,14 @@
 
 import Foundation
 
+struct TopRatedEntry: Codable {
+    let movies: [MovieEntry]?
+    
+    enum CodingKeys: String, CodingKey {
+        case movies = "results"
+    }
+}
+
 struct MovieEntry: Codable {
     
     let id:           Int?

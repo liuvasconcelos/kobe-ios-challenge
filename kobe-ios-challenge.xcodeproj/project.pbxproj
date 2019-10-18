@@ -665,6 +665,7 @@
 		};
 		34824A412355084D002876BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9386AD8D00BC8FA0D74C6B7 /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -685,6 +686,7 @@
 		};
 		34824A422355084D002876BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07042E7D2DF97A4E1C6FB769 /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
