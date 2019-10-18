@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		34824A162355084B002876BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34824A152355084B002876BE /* AppDelegate.swift */; };
-		34824A182355084B002876BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34824A172355084B002876BE /* ViewController.swift */; };
-		34824A1B2355084B002876BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34824A192355084B002876BE /* Main.storyboard */; };
 		34824A1D2355084D002876BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34824A1C2355084D002876BE /* Assets.xcassets */; };
 		34824A202355084D002876BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34824A1E2355084D002876BE /* LaunchScreen.storyboard */; };
 		34824A2B2355084D002876BE /* kobe_ios_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34824A2A2355084D002876BE /* kobe_ios_challengeTests.swift */; };
 		34824A362355084D002876BE /* kobe_ios_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34824A352355084D002876BE /* kobe_ios_challengeUITests.swift */; };
+		462FE386618C4895095E5D7D /* Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ECB68001B26343740C02C5D /* Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework */; };
+		53D1E2A3235A7956002D11B7 /* TopRatedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */; };
+		86A4425640183CE12A212632 /* Pods_kobe_ios_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3044B0AD5BD13285E36BF99B /* Pods_kobe_ios_challenge.framework */; };
+		8758F28AE9CCCDFE0AD001CE /* Pods_kobe_ios_challengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2732E24759B53439C83C9AB5 /* Pods_kobe_ios_challengeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07042E7D2DF97A4E1C6FB769 /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challenge-kobe-ios-challengeUITests.release.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challenge-kobe-ios-challengeUITests/Pods-kobe-ios-challenge-kobe-ios-challengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2732E24759B53439C83C9AB5 /* Pods_kobe_ios_challengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kobe_ios_challengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ECB68001B26343740C02C5D /* Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3044B0AD5BD13285E36BF99B /* Pods_kobe_ios_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kobe_ios_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34824A122355084B002876BE /* kobe-ios-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kobe-ios-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34824A152355084B002876BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34824A172355084B002876BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		34824A1A2355084B002876BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34824A1C2355084D002876BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34824A1F2355084D002876BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34824A212355084D002876BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		34824A312355084D002876BE /* kobe-ios-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kobe-ios-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34824A352355084D002876BE /* kobe_ios_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kobe_ios_challengeUITests.swift; sourceTree = "<group>"; };
 		34824A372355084D002876BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4790FE5BB8F44EC054A4F932 /* Pods-kobe-ios-challengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challengeTests.debug.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challengeTests/Pods-kobe-ios-challengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		52AD8C1D12924893E6A2825E /* Pods-kobe-ios-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challenge.release.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challenge/Pods-kobe-ios-challenge.release.xcconfig"; sourceTree = "<group>"; };
+		53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesViewController.swift; sourceTree = "<group>"; };
+		6C4625B031BA8A0E53E35C8D /* Pods-kobe-ios-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challenge.debug.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challenge/Pods-kobe-ios-challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		B9386AD8D00BC8FA0D74C6B7 /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challenge-kobe-ios-challengeUITests/Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EDBD98434A89625643272757 /* Pods-kobe-ios-challengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challengeTests.release.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challengeTests/Pods-kobe-ios-challengeTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A4425640183CE12A212632 /* Pods_kobe_ios_challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8758F28AE9CCCDFE0AD001CE /* Pods_kobe_ios_challengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				462FE386618C4895095E5D7D /* Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
