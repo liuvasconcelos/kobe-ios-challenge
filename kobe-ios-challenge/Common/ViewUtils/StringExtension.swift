@@ -10,7 +10,6 @@ import Foundation
 extension String {
     func getDate() -> Date {
         let dateFormatter = DateFormatter()
-        //LOCALIZAR!
         dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter.date(from: self) ?? Date()
     }

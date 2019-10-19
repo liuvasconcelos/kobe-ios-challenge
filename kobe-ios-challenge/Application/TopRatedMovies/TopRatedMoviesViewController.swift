@@ -28,10 +28,10 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
     }
     
     func showErrorMessage() {
-        let alert = UIAlertController(title: "Error message",
-                                      message: "Something happened, please try again later.",
+        let alert = UIAlertController(title: AppStrings.errorTitle,
+                                      message: AppStrings.errorMessage,
                                       preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "Ok", style: .cancel) { (_) in
+        let okButton = UIAlertAction(title: AppStrings.ok, style: .cancel) { (_) in
             self.loadMovies()
         }
         alert.addAction(okButton)

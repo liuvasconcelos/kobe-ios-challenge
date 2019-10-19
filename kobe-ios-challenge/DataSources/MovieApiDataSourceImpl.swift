@@ -12,7 +12,8 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
     private static var INSTANCE: MovieApiDataSourceImpl?
     
     private let apiKey             = "c5850ed73901b8d268d0898a8a9d8bff"
-    private let languageCode       = "pt-BR"
+    private let languageCode       = AppStrings.appLanguage
+    
     private let baseUrlForGenres   = "https://api.themoviedb.org/3/genre/movie/list?api_key="
     private let baseUrlForTopRated = "https://api.themoviedb.org/3/movie/top_rated?api_key="
     private let baseUrlForSearch   = "https://api.themoviedb.org/3/search/movie?api_key="

@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  kobe-ios-challenge
+
+  Created by Livia Vasconcelos on 18/10/19.
+  
+*/
+
+//General
+"app_language" = "en-US";
+"ok"           = "Ok";
+
+//Error messages
+"error_title"   = "Error";
+"error_message" = "Something happened and your data could not be loaded, please try again later.";
