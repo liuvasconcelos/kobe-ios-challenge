@@ -12,6 +12,6 @@ struct MovieDTO {
     let title:       String
     let imagePath:   String
     let genres:      [String]
-    let releaseDate: Date
+    let releaseDate: String
     let overview:    String
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -13,15 +13,65 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="Cw9-zn-cPu">
+                                <rect key="frame" x="16" y="181" width="343" height="305"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="cC0-4x-pyI"/>
+                                    <constraint firstAttribute="width" constant="343" id="eEO-Ru-k1f"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for Kobe iOS Challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4G-zj-Gi0">
+                                <rect key="frame" x="134" y="591" width="177" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="29P-nc-SkH"/>
+                                    <constraint firstAttribute="height" constant="21" id="ZYb-5T-jWy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Lívia Vasconcelos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94F-Mi-WPE">
+                                <rect key="frame" x="152" y="616" width="159" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="CFe-gk-SA7"/>
+                                    <constraint firstAttribute="height" constant="21" id="OOY-t4-04P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="VQU-dX-9RV">
+                                <rect key="frame" x="320" y="577" width="39" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="AHw-kW-SCV"/>
+                                    <constraint firstAttribute="height" constant="70" id="RI1-UJ-HQt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="94F-Mi-WPE" secondAttribute="bottom" constant="30" id="0Zn-zu-dfj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x4G-zj-Gi0" secondAttribute="trailing" constant="64" id="1R0-gH-Ckt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VQU-dX-9RV" secondAttribute="trailing" constant="16" id="HiA-rI-aZA"/>
+                            <constraint firstItem="Cw9-zn-cPu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Rst-XU-OUg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="94F-Mi-WPE" secondAttribute="trailing" constant="64" id="d7u-4v-JUb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VQU-dX-9RV" secondAttribute="bottom" constant="20" id="hoL-6I-6uW"/>
+                            <constraint firstItem="94F-Mi-WPE" firstAttribute="top" secondItem="x4G-zj-Gi0" secondAttribute="bottom" constant="4" id="kU2-kn-ttD"/>
+                            <constraint firstItem="Cw9-zn-cPu" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zkY-sR-SUk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image" width="785" height="696"/>
+        <image name="logo" width="177" height="271"/>
+    </resources>
 </document>

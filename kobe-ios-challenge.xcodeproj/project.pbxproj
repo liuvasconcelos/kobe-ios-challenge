@@ -21,6 +21,9 @@
 		53B51908235B3487001725D3 /* UIViewLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51907235B3487001725D3 /* UIViewLayoutExtension.swift */; };
 		53B5190B235B35DE001725D3 /* TopRatedMoviesViewControllerSearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B5190A235B35DE001725D3 /* TopRatedMoviesViewControllerSearchBarExtension.swift */; };
 		53B51910235B625B001725D3 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B5190F235B625B001725D3 /* MovieDetailsViewController.swift */; };
+		53B51912235B974A001725D3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51911235B974A001725D3 /* UIColorExtension.swift */; };
+		53B51914235B9CFE001725D3 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51913235B9CFE001725D3 /* UIImageViewExtension.swift */; };
+		53B51916235B9FEC001725D3 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51915235B9FEC001725D3 /* UILabelExtension.swift */; };
 		53D1E2A3235A7956002D11B7 /* TopRatedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */; };
 		53D1E2A5235A7B3C002D11B7 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A4235A7B3C002D11B7 /* MovieResponse.swift */; };
 		53D1E2A8235A7DEF002D11B7 /* MovieApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A7235A7DEF002D11B7 /* MovieApiDataSource.swift */; };
@@ -83,6 +86,9 @@
 		53B51907235B3487001725D3 /* UIViewLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewLayoutExtension.swift; sourceTree = "<group>"; };
 		53B5190A235B35DE001725D3 /* TopRatedMoviesViewControllerSearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesViewControllerSearchBarExtension.swift; sourceTree = "<group>"; };
 		53B5190F235B625B001725D3 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		53B51911235B974A001725D3 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		53B51913235B9CFE001725D3 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		53B51915235B9FEC001725D3 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesViewController.swift; sourceTree = "<group>"; };
 		53D1E2A4235A7B3C002D11B7 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		53D1E2A7235A7DEF002D11B7 /* MovieApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiDataSource.swift; sourceTree = "<group>"; };
@@ -200,6 +206,9 @@
 				53D1E2BE235A8FE1002D11B7 /* StringExtension.swift */,
 				53B51902235B2EF4001725D3 /* UIViewExtension.swift */,
 				53B51907235B3487001725D3 /* UIViewLayoutExtension.swift */,
+				53B51911235B974A001725D3 /* UIColorExtension.swift */,
+				53B51913235B9CFE001725D3 /* UIImageViewExtension.swift */,
+				53B51915235B9FEC001725D3 /* UILabelExtension.swift */,
 			);
 			path = ViewUtils;
 			sourceTree = "<group>";
@@ -559,6 +568,7 @@
 				53B51901235B2E6E001725D3 /* MovieCell.swift in Sources */,
 				53D1E2A8235A7DEF002D11B7 /* MovieApiDataSource.swift in Sources */,
 				53D1E2AF235A8089002D11B7 /* GenreResponse.swift in Sources */,
+				53B51916235B9FEC001725D3 /* UILabelExtension.swift in Sources */,
 				53D1E2AD235A7F0D002D11B7 /* CallbackEnum.swift in Sources */,
 				53D1E2B5235A8496002D11B7 /* TopRatedMoviesContract.swift in Sources */,
 				53B51903235B2EF4001725D3 /* UIViewExtension.swift in Sources */,
@@ -572,8 +582,10 @@
 				53B51908235B3487001725D3 /* UIViewLayoutExtension.swift in Sources */,
 				53D1E2B3235A8442002D11B7 /* TopRatedMoviesPresenter.swift in Sources */,
 				53B518F7235A9D4D001725D3 /* AppStrings.swift in Sources */,
+				53B51914235B9CFE001725D3 /* UIImageViewExtension.swift in Sources */,
 				53B51910235B625B001725D3 /* MovieDetailsViewController.swift in Sources */,
 				34824A162355084B002876BE /* AppDelegate.swift in Sources */,
+				53B51912235B974A001725D3 /* UIColorExtension.swift in Sources */,
 				53D1E2B1235A81F6002D11B7 /* MovieApiDataSourceImpl.swift in Sources */,
 				53D1E2A5235A7B3C002D11B7 /* MovieResponse.swift in Sources */,
 			);

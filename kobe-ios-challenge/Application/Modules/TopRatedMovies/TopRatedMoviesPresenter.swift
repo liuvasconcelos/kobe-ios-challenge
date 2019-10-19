@@ -56,7 +56,7 @@ class TopRatedMoviesPresenter: TopRatedMoviedPresenterContract {
                                        title:       $0.title ?? String(),
                                        imagePath:   self.getCompleteImagePath(path: $0.posterPath ?? $0.backdropPath ?? String()),
                                        genres:      self.mapGenresFrom(ids: $0.genreIds ?? []),
-                                       releaseDate: $0.releaseDate?.getDate() ?? Date(),
+                                       releaseDate: $0.releaseDate ?? String(),
                                        overview:    $0.overview ?? String())
         }
     }
