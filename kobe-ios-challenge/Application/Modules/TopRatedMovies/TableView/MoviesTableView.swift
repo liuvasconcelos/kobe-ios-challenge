@@ -11,6 +11,7 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     let searchController = UISearchController(searchResultsController: nil)
     let loader           = UIActivityIndicatorView()
+    let refresh          = UIRefreshControl()
     
     private var filteredMovies   = [MovieDTO]() {
         didSet {
@@ -34,6 +35,7 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         super.init(frame: frame, style: style)
         
         self.addLoader()
+        self.addSubview(refresh)
     }
     
     fileprivate func addLoader() {
@@ -43,13 +45,12 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         loader.style            = UIActivityIndicatorView.Style.gray
         
         self.addSubview(loader)
-        loader.anchorCenterX(anchorX: self.centerXAnchor)
-        loader.anchorCenterY(anchorY: self.centerYAnchor)
-   }
+    }
     
     func set(movies: [MovieDTO]) {
         DispatchQueue.main.async {
             self.loader.stopAnimating()
+            self.refresh.endRefreshing()
             self.movies          = movies
             self.delegate        = self
             self.dataSource      = self

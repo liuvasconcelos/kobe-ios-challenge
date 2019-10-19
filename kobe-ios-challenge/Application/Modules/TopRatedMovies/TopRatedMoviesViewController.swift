@@ -40,15 +40,8 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
                                                   height: self.view.frame.height))
         
         guard let tableView = tableView else { return }
-    
-        tableView.searchController.searchResultsUpdater                 = self
-        tableView.searchController.obscuresBackgroundDuringPresentation = false
-        tableView.searchController.searchBar.placeholder                = AppStrings.searchByName
-        tableView.separatorStyle                                        = .none
-        
-        navigationItem.searchController = tableView.searchController
-        definesPresentationContext      = true
-        
+        configureTableView()
+        configureTableViewRefreshControl()
         self.view.addSubview(tableView)
         tableView.anchor(top:      self.view.topAnchor,
                          leading:  self.view.leadingAnchor,
@@ -57,7 +50,30 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
                          padding: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
     }
     
-    func loadMovies(query: String, page: Int = 1) {
+    fileprivate func configureTableView() {
+        guard let tableView = tableView else { return }
+    
+        tableView.searchController.searchResultsUpdater                 = self
+        tableView.searchController.obscuresBackgroundDuringPresentation = false
+        tableView.searchController.searchBar.placeholder                = AppStrings.searchByName
+        tableView.separatorStyle                                        = .none
+        
+        navigationItem.searchController = tableView.searchController
+        definesPresentationContext      = true
+    }
+    
+    fileprivate func configureTableViewRefreshControl() {
+        guard let tableView = tableView else { return }
+        
+        tableView.refresh.tintColor = .gray
+        tableView.refresh.addTarget(self, action: #selector(reloadTableView), for: .valueChanged)
+    }
+    
+    @objc func reloadTableView() {
+        self.loadMovies()
+    }
+    
+    func loadMovies(query: String = String(), page: Int = 1) {
         tableView?.loader.startAnimating()
         presenter.findMovies(query: query, page: page)
     }

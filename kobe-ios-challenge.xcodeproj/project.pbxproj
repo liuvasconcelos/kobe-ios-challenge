@@ -18,7 +18,6 @@
 		53B518FE235B2D78001725D3 /* MoviesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B518FD235B2D78001725D3 /* MoviesTableView.swift */; };
 		53B51901235B2E6E001725D3 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51900235B2E6E001725D3 /* MovieCell.swift */; };
 		53B51903235B2EF4001725D3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51902235B2EF4001725D3 /* UIViewExtension.swift */; };
-		53B51906235B3049001725D3 /* MoviesTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51905235B3049001725D3 /* MoviesTableViewExtension.swift */; };
 		53B51908235B3487001725D3 /* UIViewLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51907235B3487001725D3 /* UIViewLayoutExtension.swift */; };
 		53B5190B235B35DE001725D3 /* TopRatedMoviesViewControllerSearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B5190A235B35DE001725D3 /* TopRatedMoviesViewControllerSearchBarExtension.swift */; };
 		53D1E2A3235A7956002D11B7 /* TopRatedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */; };
@@ -80,7 +79,6 @@
 		53B518FD235B2D78001725D3 /* MoviesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableView.swift; sourceTree = "<group>"; };
 		53B51900235B2E6E001725D3 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		53B51902235B2EF4001725D3 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		53B51905235B3049001725D3 /* MoviesTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewExtension.swift; sourceTree = "<group>"; };
 		53B51907235B3487001725D3 /* UIViewLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewLayoutExtension.swift; sourceTree = "<group>"; };
 		53B5190A235B35DE001725D3 /* TopRatedMoviesViewControllerSearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesViewControllerSearchBarExtension.swift; sourceTree = "<group>"; };
 		53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesViewController.swift; sourceTree = "<group>"; };
@@ -233,7 +231,6 @@
 		53B518FC235B2D68001725D3 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				53B51904235B302C001725D3 /* Extensions */,
 				53B518FF235B2E62001725D3 /* Cell */,
 				53B518FD235B2D78001725D3 /* MoviesTableView.swift */,
 			);
@@ -246,14 +243,6 @@
 				53B51900235B2E6E001725D3 /* MovieCell.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		53B51904235B302C001725D3 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				53B51905235B3049001725D3 /* MoviesTableViewExtension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		53B51909235B35C3001725D3 /* Extensions */ = {
@@ -557,7 +546,6 @@
 			files = (
 				53D1E2BC235A8DA0002D11B7 /* MovieDTO.swift in Sources */,
 				53B51901235B2E6E001725D3 /* MovieCell.swift in Sources */,
-				53B51906235B3049001725D3 /* MoviesTableViewExtension.swift in Sources */,
 				53D1E2A8235A7DEF002D11B7 /* MovieApiDataSource.swift in Sources */,
 				53D1E2AF235A8089002D11B7 /* GenreResponse.swift in Sources */,
 				53D1E2AD235A7F0D002D11B7 /* CallbackEnum.swift in Sources */,
