@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigation.navigationBar.topItem?.title                 = AppStrings.topRatedMovies
         navigation.navigationBar.prefersLargeTitles             = true
         navigation.navigationBar.topItem?.largeTitleDisplayMode = .automatic
+        navigation.navigationBar.largeTitleTextAttributes       = [.foregroundColor: UIColor.white]
+        navigation.navigationBar.titleTextAttributes            = [.foregroundColor: UIColor.white]
         
         UINavigationBar.appearance().backgroundColor = .black
         UINavigationBar.appearance().tintColor       = .white
