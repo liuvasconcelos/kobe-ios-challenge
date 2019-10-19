@@ -7,9 +7,10 @@
 
 import UIKit
 
-class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract, MovieCellViewContract {
+class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract, MoviesTableViewContract {
 
     var tableView: MoviesTableView?
+    var currentSearchText = String()
         
     lazy var presenter: TopRatedMoviedPresenterContract = {
         return TopRatedMoviesPresenter(view: self)
@@ -33,7 +34,7 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        loadMovies(query: String())
+        loadMovies()
     }
     
     fileprivate func addTableView() {
@@ -61,7 +62,8 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
         tableView.searchController.searchBar.placeholder                = AppStrings.searchByName
         tableView.separatorStyle                                        = .none
         tableView.allowsMultipleSelection                               = false
-        tableView.cellContract                                          = self
+        tableView.tableViewContract                                     = self
+        tableView.currentPage                                           = 0
         
         navigationItem.searchController = tableView.searchController
         definesPresentationContext      = true
@@ -75,12 +77,14 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
     }
     
     @objc func reloadTableView() {
+        tableView?.currentPage = 0
         self.loadMovies()
     }
     
-    func loadMovies(query: String = String(), page: Int = 1) {
+    func loadMovies() {
+        tableView?.currentPage += 1
         tableView?.loader.startAnimating()
-        presenter.findMovies(query: query, page: page)
+        presenter.findMovies(query: currentSearchText, page: tableView?.currentPage ?? 1)
     }
     
     func showErrorMessage() {
@@ -88,7 +92,7 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
                                       message: AppStrings.errorMessage,
                                       preferredStyle: .alert)
         let okButton = UIAlertAction(title: AppStrings.ok, style: .cancel) { (_) in
-            self.loadMovies(query: String())
+            self.loadMovies()
         }
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
@@ -109,6 +113,10 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
             self.navigationController?.pushViewController(detailsView, animated: true)
         }
         
+    }
+    
+    func searchForMoreMovies() {
+        loadMovies()
     }
     
 }

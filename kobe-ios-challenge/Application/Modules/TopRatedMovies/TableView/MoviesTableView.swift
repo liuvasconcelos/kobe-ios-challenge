@@ -12,20 +12,15 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     let searchController = UISearchController(searchResultsController: nil)
     let loader           = UIActivityIndicatorView()
     let refresh          = UIRefreshControl()
+    var currentPage      = Int()
     
-    var cellContract: MovieCellViewContract?
+    var tableViewContract: MoviesTableViewContract?
     
-    private var filteredMovies   = [MovieDTO]() {
+    var movies   = [MovieDTO]() {
         didSet {
             DispatchQueue.main.async {
                 self.reloadData()
             }
-        }
-    }
-    
-    private var movies   = [MovieDTO]() {
-        didSet {
-            self.filteredMovies = self.movies
         }
     }
     
@@ -55,7 +50,7 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         DispatchQueue.main.async {
             self.loader.stopAnimating()
             self.refresh.endRefreshing()
-            self.movies          = movies
+            self.movies          += movies
             self.delegate        = self
             self.dataSource      = self
             self.separatorStyle  = .none
@@ -65,7 +60,7 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredMovies.count
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -73,14 +68,20 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
-        cell.configureCellFor(movie: filteredMovies[indexPath.row])
+        cell.configureCellFor(movie: movies[indexPath.row])
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        cellContract?.didClickOnCellOf(movie: filteredMovies[indexPath.row])
+        tableViewContract?.didClickOnCellOf(movie: movies[indexPath.row])
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == movies.count - 1 {
+            tableViewContract?.searchForMoreMovies()
+        }
     }
 
 }

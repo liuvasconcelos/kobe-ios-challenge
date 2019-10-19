@@ -16,6 +16,7 @@ protocol TopRatedMoviedPresenterContract {
     func findMovies(query: String, page: Int)
 }
 
-protocol MovieCellViewContract: class {
+protocol MoviesTableViewContract: class {
     func didClickOnCellOf(movie: MovieDTO)
+    func searchForMoreMovies()
 }
