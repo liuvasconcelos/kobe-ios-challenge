@@ -17,8 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let mainView: TopRatedMoviesViewController = TopRatedMoviesViewController()
         
+        let navigation = UINavigationController(rootViewController: mainView)
+        navigation.navigationBar.topItem?.title                 = "Teste"
+        navigation.navigationBar.prefersLargeTitles             = true
+        navigation.navigationBar.topItem?.largeTitleDisplayMode = .automatic
+        
         window                     = UIWindow(frame: UIScreen.main.bounds)
-        window!.rootViewController = mainView
+        window!.rootViewController = navigation
         window!.makeKeyAndVisible()
         
         return true
