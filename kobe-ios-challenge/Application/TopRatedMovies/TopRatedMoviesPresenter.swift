@@ -49,19 +49,15 @@ class TopRatedMoviesPresenter: TopRatedMoviedPresenterContract {
     fileprivate func mapMoviesDtos(_ response: [MovieResponse]) -> [MovieDTO] {
         return response.map { MovieDTO(id:          $0.id ?? Int(),
                                        title:       $0.title ?? String(),
-                                       image:       self.getImageFrom(path: $0.posterPath ?? $0.backdropPath ?? String()),
+                                       imagePath:   self.getCompleteImagePath(path: $0.posterPath ?? $0.backdropPath ?? String()),
                                        genres:      self.mapGenresFrom(ids: $0.genreIds ?? []),
                                        releaseDate: $0.releaseDate?.getDate() ?? Date(),
                                        overview:    $0.overview ?? String())
         }
     }
     
-    fileprivate func getImageFrom(path: String) -> UIImage {
-        let completePath = "http://image.tmdb.org/t/p/w185//\(path)"
-        guard let url  = NSURL(string: completePath) else { return UIImage() }
-        guard let data = NSData(contentsOf: url as URL) else { return UIImage() }
-        
-        return UIImage(data: data as Data) ?? UIImage()
+    fileprivate func getCompleteImagePath(path: String) -> String {
+        return "http://image.tmdb.org/t/p/w185//\(path)"
     }
     
     fileprivate func mapGenresFrom(ids: [Int]) -> [String] {

@@ -10,7 +10,7 @@ import UIKit
 struct MovieDTO {
     let id:          Int
     let title:       String
-    let image:       UIImage
+    let imagePath:   String
     let genres:      [String]
     let releaseDate: Date
     let overview:    String

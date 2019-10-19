@@ -11,6 +11,12 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
     
     private static var INSTANCE: MovieApiDataSourceImpl?
     
+    private let apiKey             = "c5850ed73901b8d268d0898a8a9d8bff"
+    private let languageCode       = "pt-BR"
+    private let baseUrlForGenres   = "https://api.themoviedb.org/3/genre/movie/list?api_key="
+    private let baseUrlForTopRated = "https://api.themoviedb.org/3/movie/top_rated?api_key="
+    private let baseUrlForSearch   = "https://api.themoviedb.org/3/search/movie?api_key="
+    
     public static func getInstance() -> MovieApiDataSourceImpl {
         return INSTANCE ?? MovieApiDataSourceImpl()
     }
@@ -20,9 +26,12 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
     }
     
     func getAllGenres(_ loadCallback: @escaping (BaseCallback<GenreResponse>) -> Void) {
-        guard let url = URL(string: "https://api.themoviedb.org/3/genre/movie/list?api_key=c5850ed73901b8d268d0898a8a9d8bff&language=pt-BR") else { return }
+        let urlPath = "\(baseUrlForGenres)\(apiKey)&language=\(languageCode)"
+        
+        guard let url = URL(string: urlPath) else { return }
+        
         URLSession.shared.dataTask(with: url) { (data, response, _) in
-            guard let data = data else { return loadCallback(BaseCallback.failed()) }
+             guard let data = data else { return loadCallback(BaseCallback.failed()) }
             
              do {
                 let decoder = JSONDecoder()
@@ -37,7 +46,9 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
     }
     
     func findMovies(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<TopRatedResponse>) -> Void) {
-        guard let url = URL(string: "https://api.themoviedb.org/3/movie/top_rated?api_key=c5850ed73901b8d268d0898a8a9d8bff&page=1&language=pt-BR") else { return }
+        let urlPath = self.getUrlForMovies(query: query, page: page)
+        
+        guard let url = URL(string: urlPath) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, _) in
             guard let data = data else { return loadCallback(BaseCallback.failed()) }
             
@@ -51,6 +62,16 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
                  loadCallback(BaseCallback.failed())
           }
         }.resume()
+    }
+    
+    fileprivate func getUrlForMovies(query: String, page: Int) -> String {
+        var urlPath = "\(baseUrlForSearch)\(apiKey)&query=\(query)&page=\(page)&language=\(languageCode)"
+        
+        if query.isEmpty {
+            urlPath = "\(baseUrlForTopRated)\(apiKey)&page=\(page)&language=\(languageCode)"
+        }
+        
+        return urlPath
     }
     
     

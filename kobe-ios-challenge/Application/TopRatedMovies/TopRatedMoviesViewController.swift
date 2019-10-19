@@ -44,4 +44,12 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
                                       preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    //TO BE USED ON CELL!
+    fileprivate func getImageFrom(path: String) -> UIImage {
+        guard let url  = NSURL(string: path) else { return UIImage() }
+        guard let data = NSData(contentsOf: url as URL) else { return UIImage() }
+        
+        return UIImage(data: data as Data) ?? UIImage()
+    }
 }
