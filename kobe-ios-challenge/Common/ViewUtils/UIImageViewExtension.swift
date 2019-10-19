@@ -27,7 +27,7 @@ extension UIImageView {
         }
     }
     
-    fileprivate func getImageViewImage(_ imagePath: String) -> UIImage {
+    func getImageViewImage(_ imagePath: String) -> UIImage {
         let imageViewImage = UIImage()
         
         if imagePath.isEmpty { return imageViewImage }

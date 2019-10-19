@@ -20,7 +20,7 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
         super.viewDidLoad()
         self.addTableView()
         
-        self.navigationController?.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.barStyle = .blackTranslucent
     }
     
     deinit {

@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigation.navigationBar.largeTitleTextAttributes       = [.foregroundColor: UIColor.white]
         navigation.navigationBar.titleTextAttributes            = [.foregroundColor: UIColor.white]
         
-        UINavigationBar.appearance().backgroundColor = .black
+        UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().tintColor       = .white
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.white], for: .normal)
         
