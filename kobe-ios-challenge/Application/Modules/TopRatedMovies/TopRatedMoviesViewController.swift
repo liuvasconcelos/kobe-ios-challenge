@@ -7,25 +7,26 @@
 
 import UIKit
 
-class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract {
-    
+class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract, MovieCellViewContract {
+
     var tableView: MoviesTableView?
-    
-    private let activityIndicator = UIActivityIndicatorView()
-    
+        
     lazy var presenter: TopRatedMoviedPresenterContract = {
         return TopRatedMoviesPresenter(view: self)
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addTableView()
+    }
+    
+    deinit {
+        tableView = nil
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.backgroundColor = .blue
-        
-        self.addTableView()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,6 +58,8 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
         tableView.searchController.obscuresBackgroundDuringPresentation = false
         tableView.searchController.searchBar.placeholder                = AppStrings.searchByName
         tableView.separatorStyle                                        = .none
+        tableView.allowsMultipleSelection                               = false
+        tableView.cellContract                                          = self
         
         navigationItem.searchController = tableView.searchController
         definesPresentationContext      = true
@@ -92,6 +95,18 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
     func showMovies(_ movies: [MovieDTO]) {
         guard let tableView = tableView else { return }
         tableView.set(movies: movies)
+    }
+    
+    func didClickOnCellOf(movie: MovieDTO) {
+        let detailsView   = MovieDetailsViewController()
+        detailsView.movie = movie
+    
+        if #available(iOS 13.0, *) {
+            self.present(detailsView, animated: true, completion: nil)
+        } else  {
+            self.navigationController?.pushViewController(detailsView, animated: true)
+        }
+        
     }
     
 }

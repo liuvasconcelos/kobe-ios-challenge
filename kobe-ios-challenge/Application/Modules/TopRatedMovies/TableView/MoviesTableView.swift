@@ -13,6 +13,8 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     let loader           = UIActivityIndicatorView()
     let refresh          = UIRefreshControl()
     
+    var cellContract: MovieCellViewContract?
+    
     private var filteredMovies   = [MovieDTO]() {
         didSet {
             DispatchQueue.main.async {
@@ -75,7 +77,8 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // ir para outra tela
+        tableView.deselectRow(at: indexPath, animated: true)
+        cellContract?.didClickOnCellOf(movie: filteredMovies[indexPath.row])
     }
 
 }
