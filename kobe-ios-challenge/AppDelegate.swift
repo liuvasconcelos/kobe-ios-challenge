@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainView: TopRatedMoviesViewController = TopRatedMoviesViewController()
         
         let navigation = UINavigationController(rootViewController: mainView)
-        navigation.navigationBar.topItem?.title                 = "Teste"
+        navigation.navigationBar.topItem?.title                 = AppStrings.topRatedMovies
         navigation.navigationBar.prefersLargeTitles             = true
         navigation.navigationBar.topItem?.largeTitleDisplayMode = .automatic
         

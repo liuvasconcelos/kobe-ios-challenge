@@ -13,6 +13,5 @@ protocol TopRatedMoviesViewContract {
 }
 
 protocol TopRatedMoviedPresenterContract {
-    func getAllMovies()
     func findMovies(query: String, page: Int)
 }

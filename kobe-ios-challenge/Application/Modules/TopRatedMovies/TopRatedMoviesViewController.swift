@@ -11,23 +11,26 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
     
     var tableView: MoviesTableView?
     
+    private let activityIndicator = UIActivityIndicatorView()
+    
     lazy var presenter: TopRatedMoviedPresenterContract = {
         return TopRatedMoviesPresenter(view: self)
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadMovies()
-        self.addTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.backgroundColor = .blue
+        
+        self.addTableView()
     }
     
-    fileprivate func loadMovies() {
-        presenter.getAllMovies()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadMovies(query: String())
     }
     
     fileprivate func addTableView() {
@@ -35,21 +38,28 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
                                                   y:      0,
                                                   width:  self.view.frame.width,
                                                   height: self.view.frame.height))
+        
         guard let tableView = tableView else { return }
+    
+        tableView.searchController.searchResultsUpdater                 = self
+        tableView.searchController.obscuresBackgroundDuringPresentation = false
+        tableView.searchController.searchBar.placeholder                = AppStrings.searchByName
+        tableView.separatorStyle                                        = .none
+        
+        navigationItem.searchController = tableView.searchController
+        definesPresentationContext      = true
+        
         self.view.addSubview(tableView)
         tableView.anchor(top:      self.view.topAnchor,
                          leading:  self.view.leadingAnchor,
                          bottom:   self.view.bottomAnchor,
                          trailing: self.view.trailingAnchor,
                          padding: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+    }
     
-        tableView.searchController.searchResultsUpdater = self
-        tableView.searchController.obscuresBackgroundDuringPresentation = false
-        tableView.searchController.searchBar.placeholder = "Search by name"
-//        tableView.contract = self
-        
-        navigationItem.searchController = tableView.searchController
-        definesPresentationContext = true
+    func loadMovies(query: String, page: Int = 1) {
+        tableView?.loader.startAnimating()
+        presenter.findMovies(query: query, page: page)
     }
     
     func showErrorMessage() {
@@ -57,7 +67,7 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
                                       message: AppStrings.errorMessage,
                                       preferredStyle: .alert)
         let okButton = UIAlertAction(title: AppStrings.ok, style: .cancel) { (_) in
-            self.loadMovies()
+            self.loadMovies(query: String())
         }
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)

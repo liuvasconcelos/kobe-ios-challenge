@@ -21,11 +21,16 @@ class TopRatedMoviesPresenter: TopRatedMoviedPresenterContract {
         self.getMovie = GetMovie(apiDataSource: MovieApiDataSourceImpl.getInstance())
     }
     
-    func getAllMovies() {
+    func findMovies(query: String, page: Int) {
+        self.getGenres(query: query, page: page)
+    }
+    
+    fileprivate func getGenres(query: String, page: Int) {
         getGenre.getAllGenres { (callback) in
             callback.onSuccess { (response) in
+                self.genres.removeAll()
                 self.genres = response.genres ?? []
-                self.findMovies(query: String(), page: 1)
+                self.getMovies(query: query, page: page)
             }
             
             callback.onFailed { (_) in
@@ -34,7 +39,7 @@ class TopRatedMoviesPresenter: TopRatedMoviedPresenterContract {
         }
     }
     
-    func findMovies(query: String, page: Int) {
+    fileprivate func getMovies(query: String, page: Int) {
         getMovie.findMovies(query: query, page: page) { (callback) in
             callback.onSuccess { (response) in
                 self.view.showMovies(self.mapMoviesDtos(response.movies ?? []))

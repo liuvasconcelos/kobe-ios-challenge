@@ -7,8 +7,10 @@
 */
 
 //General
-"app_language" = "en-US";
-"ok"           = "Ok";
+"app_language"     = "en-US";
+"ok"               = "Ok";
+"top_rated_movies" = "Top Rated Movies";
+"search_by_name"   = "Search by name";
 
 //Error messages
 "error_title"   = "Error";

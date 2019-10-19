@@ -10,9 +10,14 @@ import UIKit
 class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     let searchController = UISearchController(searchResultsController: nil)
+    let loader           = UIActivityIndicatorView()
     
     private var filteredMovies   = [MovieDTO]() {
-        didSet { self.reloadData() }
+        didSet {
+            DispatchQueue.main.async {
+                self.reloadData()
+            }
+        }
     }
     
     private var movies   = [MovieDTO]() {
@@ -27,15 +32,31 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     public override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
+        
+        self.addLoader()
     }
     
-    func set(movies: [MovieDTO]) {
-        self.movies          = movies
-        self.delegate        = self
-        self.dataSource      = self
-        self.separatorStyle  = .singleLine
+    fileprivate func addLoader() {
+        loader.center           = CGPoint(x: UIScreen.main.bounds.width / 2,
+                                          y: 120)
+        loader.hidesWhenStopped = true
+        loader.style            = UIActivityIndicatorView.Style.gray
         
-        self.register(MovieCell.self, forCellReuseIdentifier: MovieCell.identifier())
+        self.addSubview(loader)
+        loader.anchorCenterX(anchorX: self.centerXAnchor)
+        loader.anchorCenterY(anchorY: self.centerYAnchor)
+   }
+    
+    func set(movies: [MovieDTO]) {
+        DispatchQueue.main.async {
+            self.loader.stopAnimating()
+            self.movies          = movies
+            self.delegate        = self
+            self.dataSource      = self
+            self.separatorStyle  = .none
+           
+            self.register(MovieCell.self, forCellReuseIdentifier: MovieCell.identifier())
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,5 +73,8 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // ir para outra tela
+    }
 
 }

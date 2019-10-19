@@ -7,8 +7,10 @@
 */
 
 //General
-"app_language" = "pt-BR";
-"ok"           = "Ok";
+"app_language"     = "pt-BR";
+"ok"               = "Ok";
+"top_rated_movies" = "Filmes Mais Votados";
+"search_by_name"   = "Busca por nome";
 
 //Error messages
 "error_title"   = "Erro";

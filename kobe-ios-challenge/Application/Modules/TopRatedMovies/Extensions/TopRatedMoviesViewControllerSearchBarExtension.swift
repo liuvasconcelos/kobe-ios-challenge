@@ -14,6 +14,6 @@ extension TopRatedMoviesViewController: UISearchResultsUpdating {
     }
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        presenter.findMovies(query: searchText, page: 1)
+        self.loadMovies(query: searchText)
     }
 }
