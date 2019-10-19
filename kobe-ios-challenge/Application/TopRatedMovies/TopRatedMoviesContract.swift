@@ -8,10 +8,11 @@
 import Foundation
 
 protocol TopRatedMoviesViewContract {
-    
+    func showErrorMessage()
+    func showMovies(_ movies: [MovieDTO])
 }
 
 protocol TopRatedMoviedPresenterContract {
-    func getAllGenres()
+    func getAllMovies()
     func findMovies(query: String, page: Int)
 }

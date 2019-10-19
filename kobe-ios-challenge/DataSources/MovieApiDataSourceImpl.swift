@@ -37,7 +37,20 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
     }
     
     func findMovies(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<TopRatedResponse>) -> Void) {
-        // g
+        guard let url = URL(string: "https://api.themoviedb.org/3/movie/top_rated?api_key=c5850ed73901b8d268d0898a8a9d8bff&page=1&language=pt-BR") else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, _) in
+            guard let data = data else { return loadCallback(BaseCallback.failed()) }
+            
+             do {
+                let decoder = JSONDecoder()
+                let movies  = try decoder.decode(TopRatedResponse.self, from: data)
+                
+                loadCallback(BaseCallback.success(movies))
+                 
+             } catch {
+                 loadCallback(BaseCallback.failed())
+          }
+        }.resume()
     }
     
     
