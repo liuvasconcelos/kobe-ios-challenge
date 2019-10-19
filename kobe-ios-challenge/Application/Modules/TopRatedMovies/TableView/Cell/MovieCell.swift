@@ -14,6 +14,9 @@ class MovieCell: UITableViewCell {
     }
     
     func configureCellFor(movie: MovieDTO) {
+        self.backgroundColor = .black
+        
+        self.textLabel?.textColor = .white
         self.textLabel?.text = movie.title
     }
     

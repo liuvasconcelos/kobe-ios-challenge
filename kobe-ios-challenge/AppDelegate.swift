@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigation.navigationBar.prefersLargeTitles             = true
         navigation.navigationBar.topItem?.largeTitleDisplayMode = .automatic
         
+        UINavigationBar.appearance().backgroundColor = .black
+        UINavigationBar.appearance().tintColor       = .white
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.white], for: .normal)
+        
         window                     = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = navigation
         window!.makeKeyAndVisible()

@@ -36,6 +36,8 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     public override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
+        self.backgroundColor = .black
+        
         self.addLoader()
         self.addSubview(refresh)
     }

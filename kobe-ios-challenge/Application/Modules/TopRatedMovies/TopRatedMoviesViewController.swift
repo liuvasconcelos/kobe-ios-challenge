@@ -18,6 +18,8 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addTableView()
+        
+        self.navigationController?.navigationBar.barStyle = .black
     }
     
     deinit {
