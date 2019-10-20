@@ -42,9 +42,13 @@ class TopRatedMoviesPresenter: TopRatedMoviedPresenterContract {
     fileprivate func getMovies(query: String, page: Int) {
         getMovie.findMovies(query: query, page: page) { (callback) in
             callback.onSuccess { (response) in
-                self.view.showMovies(self.mapMoviesDtos(response.movies ?? []))
+                if response.movies != nil  {
+                    self.view.showMovies(self.mapMoviesDtos(response.movies ?? []))
+                } else {
+                    self.view.showErrorMessage()
+                }
             }
-            
+
             callback.onFailed { (_) in
                 self.view.showErrorMessage()
             }

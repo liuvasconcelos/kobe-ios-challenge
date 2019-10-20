@@ -58,7 +58,7 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
                 let movies  = try decoder.decode(TopRatedResponse.self, from: data)
                 
                 loadCallback(BaseCallback.success(movies))
-                 
+            
              } catch {
                  loadCallback(BaseCallback.failed())
           }

@@ -71,7 +71,6 @@ class MoviesTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieCell.identifier(), for: indexPath) as? MovieCell else {
             return UITableViewCell()
         }
-        
         cell.configureCellFor(movie: movies[indexPath.row])
 
         return cell

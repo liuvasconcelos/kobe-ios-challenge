@@ -11,6 +11,7 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
 
     var tableView: MoviesTableView?
     var currentSearchText = String()
+    var errorMessage      = UILabel()
         
     lazy var presenter: TopRatedMoviedPresenterContract = {
         return TopRatedMoviesPresenter(view: self)
@@ -19,6 +20,7 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addTableView()
+        self.addErrorLabel()
         
         self.navigationController?.navigationBar.barStyle = .blackTranslucent
     }
@@ -81,6 +83,18 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
         self.loadMovies()
     }
     
+    fileprivate func addErrorLabel() {
+        self.view.addSubview(errorMessage)
+        errorMessage.anchorCenterY(anchorY: view.centerYAnchor)
+        errorMessage.anchor(leading:  view.leadingAnchor,
+                            trailing: view.trailingAnchor,
+                            padding:  UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16),
+                            size:     CGSize(width: 0, height: 50))
+        errorMessage.isHidden      = true
+        errorMessage.numberOfLines = 2
+        errorMessage.configure(text: AppStrings.errorMessage, alignment: .center, size: 15, weight: .regular, color: .lightGray)
+    }
+    
     func loadMovies() {
         tableView?.currentPage += 1
         tableView?.loader.startAnimating()
@@ -88,17 +102,15 @@ class TopRatedMoviesViewController: UIViewController, TopRatedMoviesViewContract
     }
     
     func showErrorMessage() {
-        let alert = UIAlertController(title: AppStrings.errorTitle,
-                                      message: AppStrings.errorMessage,
-                                      preferredStyle: .alert)
-        let okButton = UIAlertAction(title: AppStrings.ok, style: .cancel) { (_) in
-            self.loadMovies()
+        DispatchQueue.main.async {
+            self.errorMessage.isHidden = false
         }
-        alert.addAction(okButton)
-        self.present(alert, animated: true, completion: nil)
     }
     
     func showMovies(_ movies: [MovieDTO]) {
+        DispatchQueue.main.async {
+            self.errorMessage.isHidden = true
+        }
         guard let tableView = tableView else { return }
         tableView.set(movies: movies)
     }

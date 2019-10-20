@@ -20,42 +20,81 @@ class TopRatedMoviesUITests: XCTestCase {
         bundle         = Bundle(for: TopRatedMoviesUITests.self)
         topRatedScreen = TopRated(app: app)
         movieDetails   = MovieDetails(app: app)
+    }
+    
+    fileprivate func launchApp(isErrorTest: Bool = false) {
+        var environment = ["TESTING": "YES"]
+        if isErrorTest { environment.updateValue("YES", forKey: "ERRORTEST") }
         
-        app.launchEnvironment = ["TESTING": "YES"]
+        app.launchEnvironment = environment
         app.launchArguments  += ["-AppleLocale", "en_US"]
         app.launchArguments  += ["-AppleLanguages", "(en)"]
         app.launch()
     }
     
     func testOpeningScreenWithCorrectInformation() {
-        sleep(10)
+        self.launchApp()
         self.checkViewInformation()
         self.checkTableViewInformation()
     }
     
     fileprivate func checkViewInformation() {
-        //checar texto "Top Rated"
-        // "Search by name"
+        XCTAssertTrue(topRatedScreen?.topRatedNavigationBarTitle.exists ?? false)
+        XCTAssertEqual(topRatedScreen?.searchFieldLabel, "Search by name")
     }
     
     fileprivate func checkTableViewInformation() {
-        // quantidade de celulas
-        // checar informacao das células - com gêneros
+        XCTAssertEqual(topRatedScreen?.topRatedTableView.cells.count, 5)
+    
+        let firstCellTitle  = topRatedScreen?.topRatedFirstCell.staticTexts["Film 1"]
+        let firstCellGenres = topRatedScreen?.topRatedFirstCell.staticTexts["Genre 1, Genre 2, Genre 3"]
+        let firstCellDate   = topRatedScreen?.topRatedFirstCell.staticTexts["1995-10-20"]
+        
+        self.assertLabelExists(element: firstCellTitle!)
+        self.assertLabelExists(element: firstCellGenres!)
+        self.assertLabelExists(element: firstCellDate!)
     }
     
-    func testSearchForAMovie() {
-        // scroll para baixo - digitar "Search"
-        // checar informacao das células - com gêneros
-        // quantidade
+    fileprivate func assertLabelExists(element: XCUIElement) {
+        XCTAssertTrue(element.exists)
     }
     
-    func testSearchForAMovieAndSomeErrorOccures() {
-        // checar alert
+    func testApiConsumptionAndSomeErrorOccures() {
+        self.launchApp(isErrorTest: true)
+        self.checkViewInformation()
+        self.checkAlertInformation()
+        
+    }
+    
+    fileprivate func checkAlertInformation() {
+        XCTAssertTrue(topRatedScreen?.errorMessage.exists ?? false)
     }
     
     func testGoToDetails() {
-        // clique na célula - checar textos e overview
+        self.launchApp()
+        
+        if #available(iOS 13.0, *) {} else {
+            topRatedScreen?.clickOnFirstCell()
+            self.checkDetailsViewInformation()
+        }
+    
+    }
+    
+    fileprivate func checkDetailsViewInformation() {
+        assertLabelExists(element: movieDetails!.firstMovieTitle)
+        assertLabelExists(element: movieDetails!.firstMovieGenres)
+        assertLabelExists(element: movieDetails!.firstMovieReleaseDate)
+        assertLabelExists(element: movieDetails!.firstMovieOverview)
+        XCTAssertEqual(movieDetails!.navigationBarTitle, "Top Rated Movies")
+        
+        self.goBackToList()
     }
 
+    fileprivate func goBackToList() {
+        movieDetails?.goBackToList()
+        
+        XCTAssertTrue(topRatedScreen?.topRatedNavigationBarTitle.exists ?? false)
+        self.checkTableViewInformation()
+    }
 }
 

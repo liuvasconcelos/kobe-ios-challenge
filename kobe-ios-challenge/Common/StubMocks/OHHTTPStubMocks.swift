@@ -11,7 +11,6 @@ import UIKit
 public class OHHTTPStubMocks {
     public static func configureMocks() {
         self.searchForTopRatedMovies()
-        self.searchForMoviesByName()
         self.searchForGenres()
     }
     
@@ -20,16 +19,21 @@ public class OHHTTPStubMocks {
             let url = "https://api.themoviedb.org/3/movie/top_rated?api_key=c5850ed73901b8d268d0898a8a9d8bff&page=1&language=en-US"
             return request.url?.absoluteString == url
         }, withStubResponse: { _ -> OHHTTPStubsResponse in
-            return OHHTTPStubsResponse(fileAtPath: OHPathForFile("topRated.json", self)!, statusCode: 200, headers: nil)
+            if isErrorTest() {
+                return OHHTTPStubsResponse(fileAtPath: OHPathForFile("errorResponse.json", self)!, statusCode: 200, headers: nil)
+            } else {
+                return OHHTTPStubsResponse(fileAtPath: OHPathForFile("topRated.json", self)!, statusCode: 200, headers: nil)
+            }
         })
-    }
-    
-    static func searchForMoviesByName() {
+        
         OHHTTPStubs.stubRequests(passingTest: { request -> Bool in
-            let url = "https://api.themoviedb.org/3/search/movie?api_key=c5850ed73901b8d268d0898a8a9d8bff&query=Search&page=1&language=en-US"
-            return request.url?.absoluteString == url
+            let pageOneURL = "https://api.themoviedb.org/3/movie/top_rated?api_key=c5850ed73901b8d268d0898a8a9d8bff&page=1&language=en-US"
+            let baseURL    = "https://api.themoviedb.org/3/movie/top_rated?api_key=c5850ed73901b8d268d0898a8a9d8bff&page="
+            
+            let isNotFirstPage = request.url!.absoluteString.contains(baseURL) && request.url?.absoluteString != pageOneURL
+            return isNotFirstPage
         }, withStubResponse: { _ -> OHHTTPStubsResponse in
-            return OHHTTPStubsResponse(fileAtPath: OHPathForFile("filteredMovies.json", self)!, statusCode: 200, headers: nil)
+            return OHHTTPStubsResponse(fileAtPath: OHPathForFile("emptyResponse.json", self)!, statusCode: 200, headers: nil)
         })
     }
     
@@ -42,4 +46,10 @@ public class OHHTTPStubMocks {
         })
     }
     
+    static func isErrorTest() -> Bool {
+        let environment = ProcessInfo().environment
+        return environment["ERRORTEST"] == "YES"
+    }
+    
 }
+
