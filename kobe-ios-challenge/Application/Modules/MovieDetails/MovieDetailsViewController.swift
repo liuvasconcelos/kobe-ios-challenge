@@ -41,7 +41,7 @@ class MovieDetailsViewController: UIViewController {
         self.addALabel(distanceToTop: imageHeight + 134, height: 20, text: movie?.releaseDate ?? String(),
                        size: 14, weight: .semibold, color: .lightGray)
         self.addALabel(distanceToTop: imageHeight + 154, distanceToBottom: 16, text: movie?.overview ?? String(),
-                       size: 12, weight: .regular, color: .lightGray)
+                       size: 15, weight: .regular, color: .lightGray)
        
     }
     
