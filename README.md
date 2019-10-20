@@ -32,4 +32,4 @@ Clicking in one of the cells, app shows more details of that movie with overview
 It was made using MVP architecture to avoid view controller growth and separate responsibilities. It was also projected to be coded programmaticaly. Design was inspiraded on others movies apps and iOS 13 dark mode. For API consumption, it was choose to work with native requests, usings Codable/Decodable protocols. It is also adapted to run in iOS 13 iPhones, with modal presentation style of navigation and has translation for portuguese and english.
 
 ## Screenshots
-![https://github.com/liuvasconcelos/kobe-ios-challenge/blob/develop/Screenshots/1-top-rated-movies.png] ![https://github.com/liuvasconcelos/kobe-ios-challenge/blob/develop/Screenshots/2-movie-details.png]
+!(https://github.com/liuvasconcelos/kobe-ios-challenge/blob/develop/Screenshots/1-top-rated-movies.png) !(https://github.com/liuvasconcelos/kobe-ios-challenge/blob/develop/Screenshots/2-movie-details.png)
