@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  kobe-ios-challenge
+
+  Created by Livia Vasconcelos on 18/10/19.
+  
+*/
+
+//General
+"app_language"     = "pt-BR";
+"ok"               = "Ok";
+"top_rated_movies" = "Filmes Mais Votados";
+"search_by_name"   = "Busca por nome";
+
+//Error messages
+"error_title"   = "Erro";
+"error_message" = "Algo aconteceu e os dados não puderam ser carregados, por favor tente novamente depois.";

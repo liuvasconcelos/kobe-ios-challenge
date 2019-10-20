@@ -3,17 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		34824A162355084B002876BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34824A152355084B002876BE /* AppDelegate.swift */; };
-		34824A182355084B002876BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34824A172355084B002876BE /* ViewController.swift */; };
-		34824A1B2355084B002876BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34824A192355084B002876BE /* Main.storyboard */; };
 		34824A1D2355084D002876BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34824A1C2355084D002876BE /* Assets.xcassets */; };
 		34824A202355084D002876BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34824A1E2355084D002876BE /* LaunchScreen.storyboard */; };
-		34824A2B2355084D002876BE /* kobe_ios_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34824A2A2355084D002876BE /* kobe_ios_challengeTests.swift */; };
-		34824A362355084D002876BE /* kobe_ios_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34824A352355084D002876BE /* kobe_ios_challengeUITests.swift */; };
+		3AB9713A6D2A76C86D6F92B2 /* Pods_kobe_ios_challengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D53CB21A13B573D9EF6AA11 /* Pods_kobe_ios_challengeTests.framework */; };
+		53B518F2235A9CDA001725D3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53B518F4235A9CDA001725D3 /* Localizable.strings */; };
+		53B518F7235A9D4D001725D3 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B518F6235A9D4D001725D3 /* AppStrings.swift */; };
+		53B518FE235B2D78001725D3 /* MoviesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B518FD235B2D78001725D3 /* MoviesTableView.swift */; };
+		53B51901235B2E6E001725D3 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51900235B2E6E001725D3 /* MovieCell.swift */; };
+		53B51903235B2EF4001725D3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51902235B2EF4001725D3 /* UIViewExtension.swift */; };
+		53B51908235B3487001725D3 /* UIViewLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51907235B3487001725D3 /* UIViewLayoutExtension.swift */; };
+		53B5190B235B35DE001725D3 /* TopRatedMoviesViewControllerSearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B5190A235B35DE001725D3 /* TopRatedMoviesViewControllerSearchBarExtension.swift */; };
+		53B51910235B625B001725D3 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B5190F235B625B001725D3 /* MovieDetailsViewController.swift */; };
+		53B51912235B974A001725D3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51911235B974A001725D3 /* UIColorExtension.swift */; };
+		53B51914235B9CFE001725D3 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51913235B9CFE001725D3 /* UIImageViewExtension.swift */; };
+		53B51916235B9FEC001725D3 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51915235B9FEC001725D3 /* UILabelExtension.swift */; };
+		53B5191A235BEA2C001725D3 /* OHHTTPStubMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51919235BEA2C001725D3 /* OHHTTPStubMocks.swift */; };
+		53B5191E235BEBE8001725D3 /* genres.json in Resources */ = {isa = PBXBuildFile; fileRef = 53B5191B235BEBE8001725D3 /* genres.json */; };
+		53B51920235BEBE8001725D3 /* topRated.json in Resources */ = {isa = PBXBuildFile; fileRef = 53B5191D235BEBE8001725D3 /* topRated.json */; };
+		53B51923235BEE12001725D3 /* TopRatedMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51922235BEE12001725D3 /* TopRatedMoviesUITests.swift */; };
+		53B51926235BEE39001725D3 /* TopRated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51925235BEE39001725D3 /* TopRated.swift */; };
+		53B51928235BF117001725D3 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51927235BF117001725D3 /* MovieDetails.swift */; };
+		53B5192A235C8196001725D3 /* emptyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 53B51929235C8196001725D3 /* emptyResponse.json */; };
+		53B5192E235C96F5001725D3 /* errorResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 53B5192D235C96F4001725D3 /* errorResponse.json */; };
+		53B51933235CA708001725D3 /* DetailsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51932235CA708001725D3 /* DetailsViewTests.swift */; };
+		53D1E2A3235A7956002D11B7 /* TopRatedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */; };
+		53D1E2A5235A7B3C002D11B7 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A4235A7B3C002D11B7 /* MovieResponse.swift */; };
+		53D1E2A8235A7DEF002D11B7 /* MovieApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A7235A7DEF002D11B7 /* MovieApiDataSource.swift */; };
+		53D1E2AB235A7EE3002D11B7 /* BaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2AA235A7EE3002D11B7 /* BaseCallback.swift */; };
+		53D1E2AD235A7F0D002D11B7 /* CallbackEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2AC235A7F0D002D11B7 /* CallbackEnum.swift */; };
+		53D1E2AF235A8089002D11B7 /* GenreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2AE235A8089002D11B7 /* GenreResponse.swift */; };
+		53D1E2B1235A81F6002D11B7 /* MovieApiDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2B0235A81F6002D11B7 /* MovieApiDataSourceImpl.swift */; };
+		53D1E2B3235A8442002D11B7 /* TopRatedMoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2B2235A8442002D11B7 /* TopRatedMoviesPresenter.swift */; };
+		53D1E2B5235A8496002D11B7 /* TopRatedMoviesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2B4235A8496002D11B7 /* TopRatedMoviesContract.swift */; };
+		53D1E2B8235A857E002D11B7 /* GetGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2B7235A857E002D11B7 /* GetGenre.swift */; };
+		53D1E2BA235A8D04002D11B7 /* GetMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2B9235A8D04002D11B7 /* GetMovie.swift */; };
+		53D1E2BC235A8DA0002D11B7 /* MovieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2BB235A8DA0002D11B7 /* MovieDTO.swift */; };
+		53D1E2BF235A8FE1002D11B7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2BE235A8FE1002D11B7 /* StringExtension.swift */; };
+		9E8E34122A702E4125F0A317 /* Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B489FDAF219F058FA5271BD /* Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework */; };
+		BFD47BF143CCCD9A5E2FAF85 /* Pods_kobe_ios_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB84D29AC90F2DA996EC265 /* Pods_kobe_ios_challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +66,60 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		037A2E3D8DC597ABF641796F /* Pods-kobe-ios-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challenge.release.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challenge/Pods-kobe-ios-challenge.release.xcconfig"; sourceTree = "<group>"; };
+		091CC22E0130555DF66EF0DA /* Pods-kobe-ios-challengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challengeTests.debug.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challengeTests/Pods-kobe-ios-challengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0D53CB21A13B573D9EF6AA11 /* Pods_kobe_ios_challengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kobe_ios_challengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B4C678E778E343400A9E3DF /* Pods-kobe-ios-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challenge.debug.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challenge/Pods-kobe-ios-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		34824A122355084B002876BE /* kobe-ios-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kobe-ios-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34824A152355084B002876BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34824A172355084B002876BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		34824A1A2355084B002876BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34824A1C2355084D002876BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34824A1F2355084D002876BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34824A212355084D002876BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34824A262355084D002876BE /* kobe-ios-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kobe-ios-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		34824A2A2355084D002876BE /* kobe_ios_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kobe_ios_challengeTests.swift; sourceTree = "<group>"; };
 		34824A2C2355084D002876BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34824A312355084D002876BE /* kobe-ios-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kobe-ios-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		34824A352355084D002876BE /* kobe_ios_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kobe_ios_challengeUITests.swift; sourceTree = "<group>"; };
 		34824A372355084D002876BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53B518EB235A9C5B001725D3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		53B518F3235A9CDA001725D3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		53B518F5235A9CE1001725D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		53B518F6235A9D4D001725D3 /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
+		53B518FD235B2D78001725D3 /* MoviesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableView.swift; sourceTree = "<group>"; };
+		53B51900235B2E6E001725D3 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		53B51902235B2EF4001725D3 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		53B51907235B3487001725D3 /* UIViewLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewLayoutExtension.swift; sourceTree = "<group>"; };
+		53B5190A235B35DE001725D3 /* TopRatedMoviesViewControllerSearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesViewControllerSearchBarExtension.swift; sourceTree = "<group>"; };
+		53B5190F235B625B001725D3 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		53B51911235B974A001725D3 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		53B51913235B9CFE001725D3 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		53B51915235B9FEC001725D3 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		53B51919235BEA2C001725D3 /* OHHTTPStubMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHHTTPStubMocks.swift; sourceTree = "<group>"; };
+		53B5191B235BEBE8001725D3 /* genres.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = genres.json; sourceTree = "<group>"; };
+		53B5191D235BEBE8001725D3 /* topRated.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topRated.json; sourceTree = "<group>"; };
+		53B51922235BEE12001725D3 /* TopRatedMoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesUITests.swift; sourceTree = "<group>"; };
+		53B51925235BEE39001725D3 /* TopRated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRated.swift; sourceTree = "<group>"; };
+		53B51927235BF117001725D3 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
+		53B51929235C8196001725D3 /* emptyResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emptyResponse.json; sourceTree = "<group>"; };
+		53B5192D235C96F4001725D3 /* errorResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = errorResponse.json; sourceTree = "<group>"; };
+		53B51931235CA707001725D3 /* kobe-ios-challengeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kobe-ios-challengeTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		53B51932235CA708001725D3 /* DetailsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewTests.swift; sourceTree = "<group>"; };
+		53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesViewController.swift; sourceTree = "<group>"; };
+		53D1E2A4235A7B3C002D11B7 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		53D1E2A7235A7DEF002D11B7 /* MovieApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiDataSource.swift; sourceTree = "<group>"; };
+		53D1E2AA235A7EE3002D11B7 /* BaseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCallback.swift; sourceTree = "<group>"; };
+		53D1E2AC235A7F0D002D11B7 /* CallbackEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackEnum.swift; sourceTree = "<group>"; };
+		53D1E2AE235A8089002D11B7 /* GenreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreResponse.swift; sourceTree = "<group>"; };
+		53D1E2B0235A81F6002D11B7 /* MovieApiDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiDataSourceImpl.swift; sourceTree = "<group>"; };
+		53D1E2B2235A8442002D11B7 /* TopRatedMoviesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesPresenter.swift; sourceTree = "<group>"; };
+		53D1E2B4235A8496002D11B7 /* TopRatedMoviesContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesContract.swift; sourceTree = "<group>"; };
+		53D1E2B7235A857E002D11B7 /* GetGenre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGenre.swift; sourceTree = "<group>"; };
+		53D1E2B9235A8D04002D11B7 /* GetMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovie.swift; sourceTree = "<group>"; };
+		53D1E2BB235A8DA0002D11B7 /* MovieDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDTO.swift; sourceTree = "<group>"; };
+		53D1E2BE235A8FE1002D11B7 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		6DA48BB0E0C821FD4EB3F76A /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challenge-kobe-ios-challengeUITests.release.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challenge-kobe-ios-challengeUITests/Pods-kobe-ios-challenge-kobe-ios-challengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8141208F5463B7F5B3388E27 /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challenge-kobe-ios-challengeUITests/Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B489FDAF219F058FA5271BD /* Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E3045D3F621748B951804F5 /* Pods-kobe-ios-challengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kobe-ios-challengeTests.release.xcconfig"; path = "Target Support Files/Pods-kobe-ios-challengeTests/Pods-kobe-ios-challengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		9EB84D29AC90F2DA996EC265 /* Pods_kobe_ios_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kobe_ios_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD47BF143CCCD9A5E2FAF85 /* Pods_kobe_ios_challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB9713A6D2A76C86D6F92B2 /* Pods_kobe_ios_challengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E8E34122A702E4125F0A317 /* Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +157,8 @@
 				34824A292355084D002876BE /* kobe-ios-challengeTests */,
 				34824A342355084D002876BE /* kobe-ios-challengeUITests */,
 				34824A132355084B002876BE /* Products */,
+				6617D8DDB7868EE91D135451 /* Pods */,
+				B6C7A2DCED49EB43E63CF829 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +175,11 @@
 		34824A142355084B002876BE /* kobe-ios-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				53D1E29C235A78AE002D11B7 /* Application */,
+				53D1E29D235A78C9002D11B7 /* Models */,
+				53D1E29E235A78D9002D11B7 /* DataSources */,
+				53B518EC235A9C77001725D3 /* Common */,
 				34824A152355084B002876BE /* AppDelegate.swift */,
-				34824A172355084B002876BE /* ViewController.swift */,
-				34824A192355084B002876BE /* Main.storyboard */,
 				34824A1C2355084D002876BE /* Assets.xcassets */,
 				34824A1E2355084D002876BE /* LaunchScreen.storyboard */,
 				34824A212355084D002876BE /* Info.plist */,
@@ -110,8 +190,9 @@
 		34824A292355084D002876BE /* kobe-ios-challengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				34824A2A2355084D002876BE /* kobe_ios_challengeTests.swift */,
 				34824A2C2355084D002876BE /* Info.plist */,
+				53B51932235CA708001725D3 /* DetailsViewTests.swift */,
+				53B51931235CA707001725D3 /* kobe-ios-challengeTests-Bridging-Header.h */,
 			);
 			path = "kobe-ios-challengeTests";
 			sourceTree = "<group>";
@@ -119,10 +200,220 @@
 		34824A342355084D002876BE /* kobe-ios-challengeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				34824A352355084D002876BE /* kobe_ios_challengeUITests.swift */,
+				53B51924235BEE2E001725D3 /* Pages */,
+				53B51921235BEDFC001725D3 /* UITests */,
 				34824A372355084D002876BE /* Info.plist */,
 			);
 			path = "kobe-ios-challengeUITests";
+			sourceTree = "<group>";
+		};
+		53B518EC235A9C77001725D3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				53B51917235BEA1A001725D3 /* StubMocks */,
+				53B518EF235A9CB4001725D3 /* Localizable */,
+				53B518ED235A9C82001725D3 /* ViewUtils */,
+				53B518EE235A9C99001725D3 /* DataSourceUtils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		53B518ED235A9C82001725D3 /* ViewUtils */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E2BE235A8FE1002D11B7 /* StringExtension.swift */,
+				53B51902235B2EF4001725D3 /* UIViewExtension.swift */,
+				53B51907235B3487001725D3 /* UIViewLayoutExtension.swift */,
+				53B51911235B974A001725D3 /* UIColorExtension.swift */,
+				53B51913235B9CFE001725D3 /* UIImageViewExtension.swift */,
+				53B51915235B9FEC001725D3 /* UILabelExtension.swift */,
+			);
+			path = ViewUtils;
+			sourceTree = "<group>";
+		};
+		53B518EE235A9C99001725D3 /* DataSourceUtils */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E2AA235A7EE3002D11B7 /* BaseCallback.swift */,
+				53D1E2AC235A7F0D002D11B7 /* CallbackEnum.swift */,
+			);
+			path = DataSourceUtils;
+			sourceTree = "<group>";
+		};
+		53B518EF235A9CB4001725D3 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				53B518F4235A9CDA001725D3 /* Localizable.strings */,
+				53B518F6235A9D4D001725D3 /* AppStrings.swift */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		53B518FB235B2CE6001725D3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E2A1235A793C002D11B7 /* TopRatedMovies */,
+				53B5190E235B6244001725D3 /* MovieDetails */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		53B518FC235B2D68001725D3 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				53B518FF235B2E62001725D3 /* Cell */,
+				53B518FD235B2D78001725D3 /* MoviesTableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		53B518FF235B2E62001725D3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				53B51900235B2E6E001725D3 /* MovieCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		53B51909235B35C3001725D3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				53B5190A235B35DE001725D3 /* TopRatedMoviesViewControllerSearchBarExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		53B5190E235B6244001725D3 /* MovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				53B5190F235B625B001725D3 /* MovieDetailsViewController.swift */,
+			);
+			path = MovieDetails;
+			sourceTree = "<group>";
+		};
+		53B51917235BEA1A001725D3 /* StubMocks */ = {
+			isa = PBXGroup;
+			children = (
+				53B51918235BEA21001725D3 /* ResponseMocks */,
+				53B51919235BEA2C001725D3 /* OHHTTPStubMocks.swift */,
+			);
+			path = StubMocks;
+			sourceTree = "<group>";
+		};
+		53B51918235BEA21001725D3 /* ResponseMocks */ = {
+			isa = PBXGroup;
+			children = (
+				53B5192D235C96F4001725D3 /* errorResponse.json */,
+				53B51929235C8196001725D3 /* emptyResponse.json */,
+				53B5191B235BEBE8001725D3 /* genres.json */,
+				53B5191D235BEBE8001725D3 /* topRated.json */,
+			);
+			path = ResponseMocks;
+			sourceTree = "<group>";
+		};
+		53B51921235BEDFC001725D3 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				53B51922235BEE12001725D3 /* TopRatedMoviesUITests.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
+		53B51924235BEE2E001725D3 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				53B51925235BEE39001725D3 /* TopRated.swift */,
+				53B51927235BF117001725D3 /* MovieDetails.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		53D1E29C235A78AE002D11B7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				53B518FB235B2CE6001725D3 /* Modules */,
+				53D1E2B6235A8570002D11B7 /* Usecases */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		53D1E29D235A78C9002D11B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E2A0235A790F002D11B7 /* DTOs */,
+				53D1E29F235A7907002D11B7 /* Responses */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		53D1E29E235A78D9002D11B7 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E2A7235A7DEF002D11B7 /* MovieApiDataSource.swift */,
+				53D1E2B0235A81F6002D11B7 /* MovieApiDataSourceImpl.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		53D1E29F235A7907002D11B7 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E2A4235A7B3C002D11B7 /* MovieResponse.swift */,
+				53D1E2AE235A8089002D11B7 /* GenreResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		53D1E2A0235A790F002D11B7 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E2BB235A8DA0002D11B7 /* MovieDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		53D1E2A1235A793C002D11B7 /* TopRatedMovies */ = {
+			isa = PBXGroup;
+			children = (
+				53B51909235B35C3001725D3 /* Extensions */,
+				53B518FC235B2D68001725D3 /* TableView */,
+				53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */,
+				53D1E2B2235A8442002D11B7 /* TopRatedMoviesPresenter.swift */,
+				53D1E2B4235A8496002D11B7 /* TopRatedMoviesContract.swift */,
+			);
+			path = TopRatedMovies;
+			sourceTree = "<group>";
+		};
+		53D1E2B6235A8570002D11B7 /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E2B7235A857E002D11B7 /* GetGenre.swift */,
+				53D1E2B9235A8D04002D11B7 /* GetMovie.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		6617D8DDB7868EE91D135451 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C678E778E343400A9E3DF /* Pods-kobe-ios-challenge.debug.xcconfig */,
+				037A2E3D8DC597ABF641796F /* Pods-kobe-ios-challenge.release.xcconfig */,
+				8141208F5463B7F5B3388E27 /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig */,
+				6DA48BB0E0C821FD4EB3F76A /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.release.xcconfig */,
+				091CC22E0130555DF66EF0DA /* Pods-kobe-ios-challengeTests.debug.xcconfig */,
+				8E3045D3F621748B951804F5 /* Pods-kobe-ios-challengeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B6C7A2DCED49EB43E63CF829 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EB84D29AC90F2DA996EC265 /* Pods_kobe_ios_challenge.framework */,
+				8B489FDAF219F058FA5271BD /* Pods_kobe_ios_challenge_kobe_ios_challengeUITests.framework */,
+				0D53CB21A13B573D9EF6AA11 /* Pods_kobe_ios_challengeTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +423,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34824A3A2355084D002876BE /* Build configuration list for PBXNativeTarget "kobe-ios-challenge" */;
 			buildPhases = (
+				6BEF0BB4396493CA36E051B2 /* [CP] Check Pods Manifest.lock */,
 				34824A0E2355084B002876BE /* Sources */,
 				34824A0F2355084B002876BE /* Frameworks */,
 				34824A102355084B002876BE /* Resources */,
+				88D95E40195DE277324A15FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +442,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34824A3D2355084D002876BE /* Build configuration list for PBXNativeTarget "kobe-ios-challengeTests" */;
 			buildPhases = (
+				696EAA636204B36805A151FA /* [CP] Check Pods Manifest.lock */,
 				34824A222355084D002876BE /* Sources */,
 				34824A232355084D002876BE /* Frameworks */,
 				34824A242355084D002876BE /* Resources */,
@@ -167,9 +461,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34824A402355084D002876BE /* Build configuration list for PBXNativeTarget "kobe-ios-challengeUITests" */;
 			buildPhases = (
+				CC4B69C16FAC726A5A08E55F /* [CP] Check Pods Manifest.lock */,
 				34824A2D2355084D002876BE /* Sources */,
 				34824A2E2355084D002876BE /* Frameworks */,
 				34824A2F2355084D002876BE /* Resources */,
+				7389E82A715A45E5FCD49506 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,6 +491,7 @@
 					};
 					34824A252355084D002876BE = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1110;
 						TestTargetID = 34824A112355084B002876BE;
 					};
 					34824A302355084D002876BE = {
@@ -210,6 +507,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 34824A092355084B002876BE;
 			productRefGroup = 34824A132355084B002876BE /* Products */;
@@ -228,9 +526,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53B5192E235C96F5001725D3 /* errorResponse.json in Resources */,
+				53B5192A235C8196001725D3 /* emptyResponse.json in Resources */,
 				34824A202355084D002876BE /* LaunchScreen.storyboard in Resources */,
+				53B518F2235A9CDA001725D3 /* Localizable.strings in Resources */,
 				34824A1D2355084D002876BE /* Assets.xcassets in Resources */,
-				34824A1B2355084B002876BE /* Main.storyboard in Resources */,
+				53B51920235BEBE8001725D3 /* topRated.json in Resources */,
+				53B5191E235BEBE8001725D3 /* genres.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,13 +552,139 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		696EAA636204B36805A151FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kobe-ios-challengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BEF0BB4396493CA36E051B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kobe-ios-challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7389E82A715A45E5FCD49506 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kobe-ios-challenge-kobe-ios-challengeUITests/Pods-kobe-ios-challenge-kobe-ios-challengeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kobe-ios-challenge-kobe-ios-challengeUITests/Pods-kobe-ios-challenge-kobe-ios-challengeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kobe-ios-challenge-kobe-ios-challengeUITests/Pods-kobe-ios-challenge-kobe-ios-challengeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88D95E40195DE277324A15FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kobe-ios-challenge/Pods-kobe-ios-challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kobe-ios-challenge/Pods-kobe-ios-challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kobe-ios-challenge/Pods-kobe-ios-challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC4B69C16FAC726A5A08E55F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kobe-ios-challenge-kobe-ios-challengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		34824A0E2355084B002876BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34824A182355084B002876BE /* ViewController.swift in Sources */,
+				53D1E2BC235A8DA0002D11B7 /* MovieDTO.swift in Sources */,
+				53B51901235B2E6E001725D3 /* MovieCell.swift in Sources */,
+				53D1E2A8235A7DEF002D11B7 /* MovieApiDataSource.swift in Sources */,
+				53D1E2AF235A8089002D11B7 /* GenreResponse.swift in Sources */,
+				53B51916235B9FEC001725D3 /* UILabelExtension.swift in Sources */,
+				53D1E2AD235A7F0D002D11B7 /* CallbackEnum.swift in Sources */,
+				53D1E2B5235A8496002D11B7 /* TopRatedMoviesContract.swift in Sources */,
+				53B51903235B2EF4001725D3 /* UIViewExtension.swift in Sources */,
+				53D1E2A3235A7956002D11B7 /* TopRatedMoviesViewController.swift in Sources */,
+				53B518FE235B2D78001725D3 /* MoviesTableView.swift in Sources */,
+				53D1E2BA235A8D04002D11B7 /* GetMovie.swift in Sources */,
+				53D1E2B8235A857E002D11B7 /* GetGenre.swift in Sources */,
+				53D1E2BF235A8FE1002D11B7 /* StringExtension.swift in Sources */,
+				53B5190B235B35DE001725D3 /* TopRatedMoviesViewControllerSearchBarExtension.swift in Sources */,
+				53D1E2AB235A7EE3002D11B7 /* BaseCallback.swift in Sources */,
+				53B51908235B3487001725D3 /* UIViewLayoutExtension.swift in Sources */,
+				53D1E2B3235A8442002D11B7 /* TopRatedMoviesPresenter.swift in Sources */,
+				53B518F7235A9D4D001725D3 /* AppStrings.swift in Sources */,
+				53B51914235B9CFE001725D3 /* UIImageViewExtension.swift in Sources */,
+				53B51910235B625B001725D3 /* MovieDetailsViewController.swift in Sources */,
 				34824A162355084B002876BE /* AppDelegate.swift in Sources */,
+				53B51912235B974A001725D3 /* UIColorExtension.swift in Sources */,
+				53D1E2B1235A81F6002D11B7 /* MovieApiDataSourceImpl.swift in Sources */,
+				53D1E2A5235A7B3C002D11B7 /* MovieResponse.swift in Sources */,
+				53B5191A235BEA2C001725D3 /* OHHTTPStubMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +692,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34824A2B2355084D002876BE /* kobe_ios_challengeTests.swift in Sources */,
+				53B51933235CA708001725D3 /* DetailsViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +700,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34824A362355084D002876BE /* kobe_ios_challengeUITests.swift in Sources */,
+				53B51923235BEE12001725D3 /* TopRatedMoviesUITests.swift in Sources */,
+				53B51926235BEE39001725D3 /* TopRated.swift in Sources */,
+				53B51928235BF117001725D3 /* MovieDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,20 +722,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		34824A192355084B002876BE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				34824A1A2355084B002876BE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		34824A1E2355084D002876BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				34824A1F2355084D002876BE /* Base */,
+				53B518EB235A9C5B001725D3 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		53B518F4235A9CDA001725D3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53B518F3235A9CDA001725D3 /* pt-BR */,
+				53B518F5235A9CE1001725D3 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -315,6 +747,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -376,6 +809,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -429,6 +863,7 @@
 		};
 		34824A3B2355084D002876BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B4C678E778E343400A9E3DF /* Pods-kobe-ios-challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,12 +877,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.liu-vasconcelos.kobe-ios-challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		34824A3C2355084D002876BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 037A2E3D8DC597ABF641796F /* Pods-kobe-ios-challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -461,15 +897,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.liu-vasconcelos.kobe-ios-challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		34824A3E2355084D002876BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 091CC22E0130555DF66EF0DA /* Pods-kobe-ios-challengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L9CMSL6QFV;
 				INFOPLIST_FILE = "kobe-ios-challengeTests/Info.plist";
@@ -480,6 +918,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.liu-vasconcelos.kobe-ios-challengeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "kobe-ios-challengeTests/kobe-ios-challengeTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kobe-ios-challenge.app/kobe-ios-challenge";
@@ -488,9 +928,11 @@
 		};
 		34824A3F2355084D002876BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E3045D3F621748B951804F5 /* Pods-kobe-ios-challengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L9CMSL6QFV;
 				INFOPLIST_FILE = "kobe-ios-challengeTests/Info.plist";
@@ -501,6 +943,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.liu-vasconcelos.kobe-ios-challengeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "kobe-ios-challengeTests/kobe-ios-challengeTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kobe-ios-challenge.app/kobe-ios-challenge";
@@ -509,6 +952,7 @@
 		};
 		34824A412355084D002876BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8141208F5463B7F5B3388E27 /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -529,6 +973,7 @@
 		};
 		34824A422355084D002876BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DA48BB0E0C821FD4EB3F76A /* Pods-kobe-ios-challenge-kobe-ios-challengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
