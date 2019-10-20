@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OHHTTPStubs
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,7 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.rootViewController = navigation
         window!.makeKeyAndVisible()
         
+        configureForTestEnvironment()
         return true
+    }
+    
+    fileprivate func configureForTestEnvironment() {
+        let environment = ProcessInfo().environment
+        let isUITest = environment["TESTING"] == "YES"
+        if  isUITest {
+            OHHTTPStubMocks.configureMocks()
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) { }

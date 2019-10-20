@@ -6,6 +6,7 @@ target 'kobe-ios-challenge' do
   use_frameworks!
 
   # Pods for kobe-ios-challenge
+  pod 'OHHTTPStubs/Swift'
 
   target 'kobe-ios-challengeTests' do
     inherit! :search_paths
