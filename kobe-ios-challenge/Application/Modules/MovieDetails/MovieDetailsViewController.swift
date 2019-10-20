@@ -35,13 +35,13 @@ class MovieDetailsViewController: UIViewController {
         }
         
         self.addALabel(distanceToTop: imageHeight + 64, height: 50, text: movie?.title ?? String(),
-                       size: 20, weight: .bold, color: .white)
+                       size: 20, weight: .bold, color: .white, tag: 1)
         self.addALabel(distanceToTop: imageHeight + 114, height: 20, text: genresList,
-                       size: 14, weight: .semibold, color: .lightGray)
+                       size: 14, weight: .semibold, color: .lightGray, tag: 2)
         self.addALabel(distanceToTop: imageHeight + 134, height: 20, text: movie?.releaseDate ?? String(),
-                       size: 14, weight: .semibold, color: .lightGray)
+                       size: 14, weight: .semibold, color: .lightGray, tag: 3)
         self.addALabel(distanceToTop: imageHeight + 154, distanceToBottom: 16, text: movie?.overview ?? String(),
-                       size: 15, weight: .regular, color: .lightGray)
+                       size: 15, weight: .regular, color: .lightGray, tag: 4)
        
     }
     
@@ -83,7 +83,7 @@ class MovieDetailsViewController: UIViewController {
     
     fileprivate func addALabel(distanceToTop: CGFloat, distanceToBottom: CGFloat? = nil, height: CGFloat? = nil, text: String,
                                size: CGFloat, weight: UIFont.Weight, color: UIColor,
-                               numberOfLines: Int = 20) {
+                               numberOfLines: Int = 20, tag: Int) {
         let labelsFrames = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 30)
         let label        = UILabel(frame: labelsFrames)
         
@@ -97,6 +97,8 @@ class MovieDetailsViewController: UIViewController {
         label.configure(text: text, alignment: .center, size: size, weight: weight, color: color)
         label.numberOfLines = numberOfLines
         label.contentMode   = .topLeft
+        
+        label.tag = tag
         
     }
     

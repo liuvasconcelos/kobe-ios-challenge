@@ -10,7 +10,6 @@
 		34824A162355084B002876BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34824A152355084B002876BE /* AppDelegate.swift */; };
 		34824A1D2355084D002876BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34824A1C2355084D002876BE /* Assets.xcassets */; };
 		34824A202355084D002876BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34824A1E2355084D002876BE /* LaunchScreen.storyboard */; };
-		34824A2B2355084D002876BE /* kobe_ios_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34824A2A2355084D002876BE /* kobe_ios_challengeTests.swift */; };
 		3AB9713A6D2A76C86D6F92B2 /* Pods_kobe_ios_challengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D53CB21A13B573D9EF6AA11 /* Pods_kobe_ios_challengeTests.framework */; };
 		53B518F2235A9CDA001725D3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53B518F4235A9CDA001725D3 /* Localizable.strings */; };
 		53B518F7235A9D4D001725D3 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B518F6235A9D4D001725D3 /* AppStrings.swift */; };
@@ -31,6 +30,7 @@
 		53B51928235BF117001725D3 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51927235BF117001725D3 /* MovieDetails.swift */; };
 		53B5192A235C8196001725D3 /* emptyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 53B51929235C8196001725D3 /* emptyResponse.json */; };
 		53B5192E235C96F5001725D3 /* errorResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 53B5192D235C96F4001725D3 /* errorResponse.json */; };
+		53B51933235CA708001725D3 /* DetailsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B51932235CA708001725D3 /* DetailsViewTests.swift */; };
 		53D1E2A3235A7956002D11B7 /* TopRatedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */; };
 		53D1E2A5235A7B3C002D11B7 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A4235A7B3C002D11B7 /* MovieResponse.swift */; };
 		53D1E2A8235A7DEF002D11B7 /* MovieApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E2A7235A7DEF002D11B7 /* MovieApiDataSource.swift */; };
@@ -76,7 +76,6 @@
 		34824A1F2355084D002876BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34824A212355084D002876BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34824A262355084D002876BE /* kobe-ios-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kobe-ios-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		34824A2A2355084D002876BE /* kobe_ios_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kobe_ios_challengeTests.swift; sourceTree = "<group>"; };
 		34824A2C2355084D002876BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34824A312355084D002876BE /* kobe-ios-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kobe-ios-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34824A372355084D002876BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +100,8 @@
 		53B51927235BF117001725D3 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 		53B51929235C8196001725D3 /* emptyResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emptyResponse.json; sourceTree = "<group>"; };
 		53B5192D235C96F4001725D3 /* errorResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = errorResponse.json; sourceTree = "<group>"; };
+		53B51931235CA707001725D3 /* kobe-ios-challengeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kobe-ios-challengeTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		53B51932235CA708001725D3 /* DetailsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewTests.swift; sourceTree = "<group>"; };
 		53D1E2A2235A7956002D11B7 /* TopRatedMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesViewController.swift; sourceTree = "<group>"; };
 		53D1E2A4235A7B3C002D11B7 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		53D1E2A7235A7DEF002D11B7 /* MovieApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiDataSource.swift; sourceTree = "<group>"; };
@@ -189,8 +190,9 @@
 		34824A292355084D002876BE /* kobe-ios-challengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				34824A2A2355084D002876BE /* kobe_ios_challengeTests.swift */,
 				34824A2C2355084D002876BE /* Info.plist */,
+				53B51932235CA708001725D3 /* DetailsViewTests.swift */,
+				53B51931235CA707001725D3 /* kobe-ios-challengeTests-Bridging-Header.h */,
 			);
 			path = "kobe-ios-challengeTests";
 			sourceTree = "<group>";
@@ -489,6 +491,7 @@
 					};
 					34824A252355084D002876BE = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1110;
 						TestTargetID = 34824A112355084B002876BE;
 					};
 					34824A302355084D002876BE = {
@@ -689,7 +692,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34824A2B2355084D002876BE /* kobe_ios_challengeTests.swift in Sources */,
+				53B51933235CA708001725D3 /* DetailsViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,6 +907,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L9CMSL6QFV;
 				INFOPLIST_FILE = "kobe-ios-challengeTests/Info.plist";
@@ -914,6 +918,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.liu-vasconcelos.kobe-ios-challengeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "kobe-ios-challengeTests/kobe-ios-challengeTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kobe-ios-challenge.app/kobe-ios-challenge";
@@ -926,6 +932,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L9CMSL6QFV;
 				INFOPLIST_FILE = "kobe-ios-challengeTests/Info.plist";
@@ -936,6 +943,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.liu-vasconcelos.kobe-ios-challengeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "kobe-ios-challengeTests/kobe-ios-challengeTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kobe-ios-challenge.app/kobe-ios-challenge";
